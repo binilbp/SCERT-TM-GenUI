@@ -4,8 +4,8 @@
 </script>
 
 {#if isHelpEnabled}
-	<div class="mb-2 w-full rounded-lg border-2 border-sky-900 bg-slate-50 px-4 py-2">
-		<p class="text-sm font-semibold md:text-lg">
+	<div class="mb-3 w-full rounded-lg bg-sky-100 px-4 py-2">
+		<p class="py-1 text-sm font-semibold md:text-lg">
 			Simplify your lesson planning. <br />Create free Teaching Manuals tailored to the Kerala State
 			SCERT syllabus in minutes.
 		</p>
@@ -24,6 +24,6 @@
 		isHelpEnabled = !isHelpEnabled;
 		console.log('Toggle Help Instructions');
 	}}
-	class="rounded-lg bg-slate-700 p-2 text-sky-50"
+	class="rounded-lg bg-slate-700 p-2 text-sky-50 shadow-sm"
 	>{buttonContent}
 </button>
