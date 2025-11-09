@@ -2,6 +2,6 @@
 	const appName = 'TM Generator';
 </script>
 
-<div>
-	<h1 class="text-xl font-semibold">{appName}</h1>
+<div class="bg-slate-800 py-2">
+	<h1 class="px-3 text-xl font-semibold text-sky-50">{appName}</h1>
 </div>

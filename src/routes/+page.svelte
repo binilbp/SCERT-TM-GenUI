@@ -4,8 +4,10 @@
 	import Body from '$lib/components/Body.svelte';
 </script>
 
-<div class="flex min-h-dvh flex-col justify-between bg-amber-200 px-5 py-2">
-	<Header />
-	<Body />
+<div class="flex min-h-dvh flex-col justify-between bg-sky-50">
+	<div class="flex min-h-dvh flex-col justify-start gap-4 md:gap-6">
+		<Header />
+		<Body />
+	</div>
 	<Footer />
 </div>
