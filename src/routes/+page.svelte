@@ -1,7 +1,7 @@
 <script>
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import Body from '$lib/components/Body.svelte';
+	import { Header } from '$lib';
+	import { Footer } from '$lib';
+	import { Body } from '$lib';
 </script>
 
 <div class="flex min-h-dvh flex-col justify-between">

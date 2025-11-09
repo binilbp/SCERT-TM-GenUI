@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Instructions from './Instructions.svelte';
+	import { Instructions } from '$lib';
 
 	let isHelpEnabled: boolean = $state(true);
 </script>

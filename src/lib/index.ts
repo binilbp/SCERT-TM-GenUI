@@ -1,1 +1,7 @@
-// place files you want to import through the `$lib` alias in this folder.
+//import all required from different locatoins here, these then can be simply used everywhere with just '$lib/name'
+import Header from '$lib/components/Header.svelte';
+import Footer from '$lib/components/Footer.svelte';
+import Body from '$lib/components/Body.svelte';
+import Instructions from '$lib/components/Instructions.svelte';
+
+export { Header, Footer, Body, Instructions };
