@@ -1,2 +1,11 @@
-<h1 class="text-4xl">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import Body from '$lib/components/Body.svelte';
+</script>
+
+<div class="flex min-h-dvh flex-col justify-between bg-amber-200 px-5 py-2">
+	<Header />
+	<Body />
+	<Footer />
+</div>
