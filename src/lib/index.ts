@@ -3,5 +3,6 @@ import Header from '$lib/components/Header.svelte';
 import Footer from '$lib/components/Footer.svelte';
 import Body from '$lib/components/Body.svelte';
 import Instructions from '$lib/components/Instructions.svelte';
+import SelectionMenu from './components/SelectionMenu.svelte';
 
-export { Header, Footer, Body, Instructions };
+export { Header, Footer, Body, Instructions, SelectionMenu };

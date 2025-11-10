@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { Instructions } from '$lib';
+	import { Instructions, SelectionMenu } from '$lib';
 
-	let isHelpEnabled: boolean = $state(true);
+	let statusCode: number = $state(10);
 </script>
 
-<div class="flex flex-col items-center justify-start px-4">
-	<Instructions {isHelpEnabled} />
+<div class="flex flex-col items-center justify-start p-4">
+	<Instructions {statusCode} />
+	<SelectionMenu />
 </div>
