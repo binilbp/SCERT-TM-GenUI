@@ -11,5 +11,5 @@
 </script>
 
 <div>
-	<p class="mx-4 text-center text-lg font-semibold md:text-3xl">{instructionMesg}</p>
+	<p class="mx-4 text-center text-lg font-semibold text-sky-950 md:text-3xl">{instructionMesg}</p>
 </div>
