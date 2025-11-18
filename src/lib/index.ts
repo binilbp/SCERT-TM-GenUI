@@ -4,6 +4,6 @@ import Footer from '$lib/components/Footer.svelte';
 import Body from '$lib/components/Body.svelte';
 import Instructions from '$lib/components/Instructions.svelte';
 import SelectionMenu from './components/SelectionMenu.svelte';
-import { educationalData } from './assets/data';
+import { classData } from './assets/data';
 
-export { Header, Footer, Body, Instructions, SelectionMenu, educationalData };
+export { Header, Footer, Body, Instructions, SelectionMenu, classData };

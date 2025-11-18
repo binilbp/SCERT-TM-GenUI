@@ -1,16 +1,28 @@
 <script lang="ts">
+	import type { Chapter } from '$lib/assets/data';
 	//TODO:later import data from backend using load()
-	import { educationalData } from '$lib';
+	import { classData } from '$lib';
 
 	let selectedClass: string = $state('');
 	let selectedSubject: string = $state('');
 	let selectedChapter: string = $state('');
+	let chapterList: Chapter[] = $state([]);
 	let subjectList: string[] = $state([]);
 
-	function getSubjectList(classnumber: string) {
-		let classcontent = educationalData.find((item) => item.classNumber === classnumber);
+	function getSubjectList(): string[] {
+		console.log('Selected chapter', selectedClass);
+		const classcontent = classData.find((item) => item.classNumber === selectedClass);
 		if (!classcontent) return [];
-		return Object.keys(classcontent.content);
+		return classcontent.subjects.map((item) => item.name);
+	}
+
+	function getChapterList(): Chapter[] {
+		console.log('Selected chapter', selectedSubject);
+		const classcontent = classData.find((item) => item.classNumber === selectedClass);
+		if (!classcontent) return [];
+		const subjectData = classcontent.subjects.find((item) => item.name === selectedSubject);
+
+		return subjectData ? subjectData.chapters : [];
 	}
 </script>
 
@@ -25,13 +37,33 @@
 			class="my-1.5 rounded-md bg-slate-50 p-2.5"
 			bind:value={selectedClass}
 			onchange={() => {
-				subjectList = getSubjectList(selectedClass);
+				subjectList = getSubjectList();
 			}}
 		>
 			<option value="" disabled selected hidden>select class</option>
-			{#each subjectList as subject}
-				<option> {subject} </option>
+			{#each classData as classData (classData.classNumber)}
+				<option> {classData.classNumber} </option>
 			{/each}
+		</select>
+	</div>
+
+	<div class="flex flex-col justify-start">
+		<label for="subject-selection" class="text-xl font-semibold">Subject</label>
+		<select
+			name="subject-menu"
+			id="subject-selection"
+			class="my-1.5 rounded-md bg-slate-50 p-2.5"
+			bind:value={selectedSubject}
+			onchange={() => {
+				chapterList = getChapterList();
+			}}
+		>
+			{#if selectedClass !== ''}
+				<option value="" disabled selected hidden>select subject</option>
+				{#each subjectList as subject (subject)}
+					<option> {subject} </option>
+				{/each}
+			{/if}
 		</select>
 	</div>
 
@@ -41,22 +73,13 @@
 			name="chapters-menu"
 			id="chapters-selection"
 			class="my-1.5 rounded-md bg-slate-50 p-2.5"
+			bind:value={selectedChapter}
 		>
-			{#if selectedClass !== ''}
+			{#if selectedSubject !== ''}
 				<option value="" disabled selected hidden>select chapter</option>
-				<option> 1 </option>
-				<option> 2 </option>
-			{/if}
-		</select>
-	</div>
-
-	<div class="flex flex-col justify-start">
-		<label for="subject-selection" class="text-xl font-semibold">Subject</label>
-		<select name="subject-menu" id="subject-selection" class="my-1.5 rounded-md bg-slate-50 p-2.5">
-			{#if selectedClass !== ''}
-				<option value="" disabled selected hidden>select subject</option>
-				<option> 1 </option>
-				<option> 2 </option>
+				{#each chapterList as chapter (chapter.chapterNumber)}
+					<option>{chapter.title}</option>
+				{/each}
 			{/if}
 		</select>
 	</div>
