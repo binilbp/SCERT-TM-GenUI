@@ -2,12 +2,16 @@
 	import type { Chapter } from '$lib/assets/data';
 	//TODO:later import data from backend using load()
 	import { classData } from '$lib';
+	import OutputWindow from './OutputWindow.svelte';
 
+	//TODO:make use of derived instead of state for all list
 	let selectedClass: string = $state('');
 	let selectedSubject: string = $state('');
 	let selectedChapter: string = $state('');
 	let chapterList: Chapter[] = $state([]);
 	let subjectList: string[] = $state([]);
+
+	let isGenerating: boolean = $state(false);
 
 	function getSubjectList(): string[] {
 		console.log('Selected chapter', selectedClass);
@@ -94,5 +98,18 @@
 			{/if}
 		</select>
 	</div>
-	<button class="rounded-md bg-sky-600 py-3 text-sky-50">Generate TM</button>
+	<button
+		class="rounded-md bg-sky-600 py-3 text-sky-50"
+		onclick={() => {
+			isGenerating = !isGenerating;
+		}}
+	>
+		{#if isGenerating}
+			Stop
+		{:else}
+			Create Teaching Mannual
+		{/if}
+	</button>
+
+	<OutputWindow {isGenerating} />
 </div>
