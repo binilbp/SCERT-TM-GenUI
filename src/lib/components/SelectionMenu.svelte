@@ -27,7 +27,7 @@
 </script>
 
 <div
-	class="my-10 flex w-11/12 flex-col justify-around gap-5 rounded-lg bg-sky-100 p-5 md:w-1/2 lg:w-1/3"
+	class="my-10 flex w-11/12 flex-col justify-around gap-2 rounded-lg bg-sky-100 p-5 md:w-1/2 lg:w-1/3"
 >
 	<div class="flex flex-col justify-start">
 		<label for="class-selection" class="text-xl font-semibold">Class</label>
@@ -94,4 +94,5 @@
 			{/if}
 		</select>
 	</div>
+	<button class="rounded-md bg-sky-600 py-3 text-sky-50">Generate TM</button>
 </div>
