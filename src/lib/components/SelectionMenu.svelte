@@ -15,6 +15,8 @@
 
 	
 	let isGenerating: boolean = $state(false);
+	let generatedResult: any = $state(null);
+	let errorMessage: string = $state('');
 	
 	//create a 100 numbers array (1...100)
 	const numbers = Array.from({ length: 100 }, (_, i) => i + 1);
@@ -57,7 +59,7 @@
 		);
 	}
 
-	function getTMData() {
+	async function getTMData() {
 		//check all options selected or not
 		console.log("class:", selectedClass)
 		console.log("subject:", selectedSubject)
@@ -70,9 +72,42 @@
 			chapter_number: Number(selectedChapter),
 			page_number: selectedPage
 		}; 	
+		generatedResult = null;
+		errorMessage = '';
 		
 
 		console.log("Getting TM Data")
+		try {
+			isGenerating = true;
+
+			const response = await fetch(
+			'http://localhost:8000/generate-data/',
+			{
+				method: 'POST',
+				headers: {
+				'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(payload)
+			}
+			);
+
+			// 3. Handle HTTP errors
+			if (!response.ok) {
+			const err = await response.json();
+			throw new Error(err.detail || 'Request failed');
+			}
+
+			// 4. Read response
+			const data = await response.json();
+
+			// 5. Gemini returns JSON as STRING → parse again
+			generatedResult = JSON.parse(data.generated_data);
+
+		} catch (err: any) {
+			errorMessage = err.message ?? 'Unknown error occurred';
+		} finally {
+			isGenerating = false;
+		}
 
 	}
 	
@@ -172,12 +207,12 @@
 		}}
 	>
 		{#if isGenerating}
-			Stop
+			Generating..
 		{:else}
 			Create Teaching Mannual
 		{/if}
 		
 	</button>
 
-	<OutputWindow {isGenerating} />
+	<OutputWindow { isGenerating} {generatedResult} {errorMessage} />
 </div>
