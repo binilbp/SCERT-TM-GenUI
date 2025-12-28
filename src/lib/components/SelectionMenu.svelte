@@ -81,7 +81,7 @@
 			isGenerating = true;
 
 			const response = await fetch(
-			'http://localhost:8000/generate-data/',
+			'https://scert-tm-generator.onrender.com/generate-data/',
 			{
 				method: 'POST',
 				headers: {
