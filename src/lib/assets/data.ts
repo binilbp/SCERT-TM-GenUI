@@ -22,7 +22,7 @@ export const classData: ClassDataType = [
 		classNumber: '2',
 		subjects: [
 			{
-				name: 'Malalyalam',
+				name: 'Malayalam',
 				chapters: [
 					{ chapterNumber: '6', title: 'പറക്കും വീട് ', minPage: '62', maxPage: '78' },
 					{ chapterNumber: '7', title: 'മണിയൻ്റെ യാത്ര', minPage: '88', maxPage: '99' },
