@@ -3,7 +3,6 @@
 	//TODO:later import data from backend using load()
 	import { classData } from '$lib';
 	import OutputWindow from './OutputWindow.svelte';
-	
 
 	//TODO:make use of derived instead of state for all list
 	let selectedClass: string = $state('');
@@ -13,13 +12,9 @@
 	let chapterList: Chapter[] = $state([]);
 	let subjectList: string[] = $state([]);
 
-	
 	let isGenerating: boolean = $state(false);
 	let generatedResult: any = $state(null);
 	let errorMessage: string = $state('');
-	
-	//create a 100 numbers array (1...100)
-	const numbers = Array.from({ length: 100 }, (_, i) => i + 1);
 
 	function getSubjectList(): string[] {
 		const classcontent = classData.find((item) => item.classNumber === selectedClass);
@@ -37,15 +32,13 @@
 
 	//check chapter really belongs to the subject and class
 	function isSelectionConsistent(): boolean {
-		const classObj = classData.find(c => c.classNumber === selectedClass);
+		const classObj = classData.find((c) => c.classNumber === selectedClass);
 		if (!classObj) return false;
 
-		const subjectObj = classObj.subjects.find(s => s.name === selectedSubject);
+		const subjectObj = classObj.subjects.find((s) => s.name === selectedSubject);
 		if (!subjectObj) return false;
 
-		return subjectObj.chapters.some(
-			ch => ch.chapterNumber === selectedChapter
-		);
+		return subjectObj.chapters.some((ch) => ch.chapterNumber === selectedChapter);
 	}
 
 	//check validity;  used to disable or enable the generate button
@@ -61,40 +54,36 @@
 
 	async function getTMData() {
 		//check all options selected or not
-		console.log("class:", selectedClass)
-		console.log("subject:", selectedSubject)
-		console.log("chapter:", selectedChapter)
-		console.log("page:", selectedPage)
+		console.log('class:', selectedClass);
+		console.log('subject:', selectedSubject);
+		console.log('chapter:', selectedChapter);
+		console.log('page:', selectedPage);
 
 		const payload = {
 			class_name: selectedClass,
 			subject: selectedSubject,
 			chapter_number: Number(selectedChapter),
 			page_number: selectedPage
-		}; 	
+		};
 		generatedResult = null;
 		errorMessage = '';
-		
 
-		console.log("Getting TM Data")
+		console.log('Getting TM Data');
 		try {
 			isGenerating = true;
 
-			const response = await fetch(
-			'https://scert-tm-generator.onrender.com/generate-data/',
-			{
+			const response = await fetch('https://scert-tm-generator.onrender.com/generate-data/', {
 				method: 'POST',
 				headers: {
-				'Content-Type': 'application/json'
+					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify(payload)
-			}
-			);
+			});
 
 			// 3. Handle HTTP errors
 			if (!response.ok) {
-			const err = await response.json();
-			throw new Error(err.detail || 'Request failed');
+				const err = await response.json();
+				throw new Error(err.detail || 'Request failed');
 			}
 
 			// 4. Read response
@@ -102,15 +91,30 @@
 
 			// 5. Gemini returns JSON as STRING → parse again
 			generatedResult = JSON.parse(data.generated_data);
-
 		} catch (err: any) {
 			errorMessage = err.message ?? 'Unknown error occurred';
 		} finally {
 			isGenerating = false;
 		}
-
 	}
-	
+
+	// pagelist dynamic selection
+	let pageList = $derived.by(() => {
+		// Find the currently selected chapter object
+		const activeChapter = chapterList.find((ch) => ch.chapterNumber === selectedChapter);
+
+		// Safety check: if no chapter is found or data is missing, return empty
+		if (!activeChapter || !activeChapter.minPage || !activeChapter.maxPage) {
+			return [];
+		}
+
+		// Convert strings to integers
+		const min = parseInt(activeChapter.minPage, 10);
+		const max = parseInt(activeChapter.maxPage, 10);
+
+		// Generate the range array
+		return Array.from({ length: max - min + 1 }, (_, i) => min + i);
+	});
 </script>
 
 <div
@@ -126,8 +130,8 @@
 			onchange={() => {
 				subjectList = getSubjectList();
 				selectedSubject = '';
- 				selectedChapter = '';
-  				selectedPage = 0;
+				selectedChapter = '';
+				selectedPage = 0;
 			}}
 		>
 			<option value="" disabled selected hidden>select class</option>
@@ -146,8 +150,8 @@
 			bind:value={selectedSubject}
 			onchange={() => {
 				chapterList = getChapterList();
-  				selectedChapter = '';
-  				selectedPage = 0;
+				selectedChapter = '';
+				selectedPage = 0;
 			}}
 		>
 			{#if selectedClass !== ''}
@@ -162,40 +166,39 @@
 	<div class="flex flex-col justify-start">
 		<label for="chapters-selection" class="text-xl font-semibold">Chapter</label>
 		<select
-		id="chapters-selection"
-		class="my-1.5 rounded-md bg-slate-50 p-2.5"
-		bind:value={selectedChapter}
+			id="chapters-selection"
+			class="my-1.5 rounded-md bg-slate-50 p-2.5"
+			bind:value={selectedChapter}
 		>
-		{#if selectedSubject !== ''}
-			<option value="" disabled selected hidden>select chapter</option>
+			{#if selectedSubject !== ''}
+				<option value="" disabled selected hidden>select chapter</option>
 
-			{#each chapterList as chapter (chapter.chapterNumber)}
-			<option value={chapter.chapterNumber}>
-				{chapter.title}
-			</option>
-			{/each}
-		{/if}
+				{#each chapterList as chapter (chapter.chapterNumber)}
+					<option value={chapter.chapterNumber}>
+						{chapter.title}
+					</option>
+				{/each}
+			{/if}
 		</select>
 	</div>
 
 	<div class="flex flex-col justify-start">
 		<label for="pages-selection" class="text-xl font-semibold">Page</label>
-		<select 
-			name="pages-menu" 
-			id="pages-selection" 
-			class="my-1.5 rounded-md bg-slate-50 p-2.5" 
+		<select
+			name="pages-menu"
+			id="pages-selection"
+			class="my-1.5 rounded-md bg-slate-50 p-2.5"
 			bind:value={selectedPage}
-			
 		>
-		{#if selectedChapter !== ''}
-			<option value="" disabled selected hidden>select page</option>
+			{#if selectedChapter !== ''}
+				<option value="" disabled selected hidden>select page</option>
 
-			{#each numbers as num}
-			<option value={num}>
-				{num}
-			</option>
-			{/each}
-		{/if}
+				{#each pageList as num}
+					<option value={num}>
+						{num}
+					</option>
+				{/each}
+			{/if}
 		</select>
 	</div>
 
@@ -211,8 +214,7 @@
 		{:else}
 			Create Teaching Mannual
 		{/if}
-		
 	</button>
 
-	<OutputWindow { isGenerating} {generatedResult} {errorMessage} />
+	<OutputWindow {isGenerating} {generatedResult} {errorMessage} />
 </div>
