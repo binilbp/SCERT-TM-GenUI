@@ -51,5 +51,45 @@ export const classData: ClassDataType = [
 				]
 			}
 		]
+	},
+    {
+		classNumber: '4',
+		subjects: [
+			{
+				name: 'Malayalam',
+				chapters: [
+					{ chapterNumber: '4', title: "കളിക്കാം ചിരിക്കാം", minPage: '87', maxPage: '104' },
+					{ chapterNumber: '5', title: "നന്നാവാനൊന്നാവാം", minPage: '105', maxPage: '125' },
+					{ chapterNumber: '6', title: "പിന്നിട്ട പാതകൾ", minPage: '127', maxPage: '149' }
+				]
+			},
+			{
+				name: 'English',
+				chapters: [
+					{ chapterNumber: '3', title: "Pages of Wonder", minPage: '61', maxPage: '86' },
+					{ chapterNumber: '4', title: "Delightful Bites", minPage: '95', maxPage: '124' },
+					{ chapterNumber: '5', title: "The Melody of Rain", minPage: '125', maxPage: '150' }
+				]
+			},
+            {
+				name: 'EVS',
+				chapters: [
+					{ chapterNumber: '6', title: "ആകാശക്കാഴ്‌ചകൾ", minPage: '106', maxPage: '121' },
+					{ chapterNumber: '7', title: "ദിക്കറിയാം നാടറിയാം", minPage: '122', maxPage: '133' },
+					{ chapterNumber: '8', title: "ഇന്നലെ, ഇന്ന്...", minPage: '134', maxPage: '158' }
+				]
+			},
+			{
+				name: 'Maths',
+				chapters: [
+					{ chapterNumber: '6', title: "കുറയുന്ന കൂട്ടം", minPage: '77', maxPage: '94' },
+					{ chapterNumber: '7', title: "പെരുക്കൽപ്പെരുമ", minPage: '103', maxPage: '120' },
+					{ chapterNumber: '8', title: "ഇങ്ങനെ അളക്കാം", minPage: '121', maxPage: '138' },
+					{ chapterNumber: '9', title: "തുല്യമായ കൂട്ടം", minPage: '139', maxPage: '162' }
+					{ chapterNumber: '10', title: "അളന്നും തൂക്കിയും", minPage: '163', maxPage: '172' }
+					{ chapterNumber: '11', title: "ചിത്രങ്ങൾ കഥ പറയുന്നു", minPage: '173', maxPage: '182' }
+				]
+			}
+		]
 	}
 ];
