@@ -85,8 +85,8 @@ export const classData: ClassDataType = [
 					{ chapterNumber: '6', title: "കുറയുന്ന കൂട്ടം", minPage: '77', maxPage: '94' },
 					{ chapterNumber: '7', title: "പെരുക്കൽപ്പെരുമ", minPage: '103', maxPage: '120' },
 					{ chapterNumber: '8', title: "ഇങ്ങനെ അളക്കാം", minPage: '121', maxPage: '138' },
-					{ chapterNumber: '9', title: "തുല്യമായ കൂട്ടം", minPage: '139', maxPage: '162' }
-					{ chapterNumber: '10', title: "അളന്നും തൂക്കിയും", minPage: '163', maxPage: '172' }
+					{ chapterNumber: '9', title: "തുല്യമായ കൂട്ടം", minPage: '139', maxPage: '162' },
+					{ chapterNumber: '10', title: "അളന്നും തൂക്കിയും", minPage: '163', maxPage: '172' },
 					{ chapterNumber: '11', title: "ചിത്രങ്ങൾ കഥ പറയുന്നു", minPage: '173', maxPage: '182' }
 				]
 			}
