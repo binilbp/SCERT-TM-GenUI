@@ -47,7 +47,9 @@ export const classData: ClassDataType = [
 					{ chapterNumber: '6', title: 'കാട്ടിലെ ഉത്സവം', minPage: '96', maxPage: '104' },
 					{ chapterNumber: '7', title: 'ചങ്ങാതിക്കൂട്ടം', minPage: '112', maxPage: '129' },
 					{ chapterNumber: '8', title: "അളന്നു നോക്കാം", minPage: '130', maxPage: '141' },
-					{ chapterNumber: '9', title: "കലണ്ടർ കളികൾ", minPage: '142', maxPage: '153' }
+					{ chapterNumber: '9', title: "കലണ്ടർ കളികൾ", minPage: '142', maxPage: '153' },
+					{ chapterNumber: '10', title: "ചന്തമുള്ള ബന്ധങ്ങൾ", minPage: '154', maxPage: '165' },
+					{ chapterNumber: '11', title: "എണ്ണി...എണ്ണി... കളത്തിലാക്കാം", minPage: '166', maxPage: '174' }
 				]
 			}
 		]
