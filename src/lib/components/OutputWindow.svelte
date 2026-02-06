@@ -60,8 +60,8 @@
 
         <!-- Values -->
         <div class="mb-3">
-          <h3 class="font-semibold">Values & Concepts</h3>
-          <p>{tm["Values and concepts"]}</p>
+          <h3 class="font-semibold">Ideas, Understanding, Values</h3>
+          <p>{tm["Ideas, Understanding, Values"]}</p>
         </div>
 
         <!-- Assessment -->
