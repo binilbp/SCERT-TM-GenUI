@@ -55,6 +55,45 @@ export const classData: ClassDataType = [
 		]
 	},
     {
+		classNumber: '3',
+		subjects: [
+			{
+				name: 'Malayalam',
+				chapters: [
+					{ chapterNumber: '1', title: 'കനകച്ചിലങ്ക ', minPage: '7', maxPage: '31' },
+					{ chapterNumber: '2', title: 'പലഹാരപ്പൊതി', minPage: '33', maxPage: '51' },
+					{ chapterNumber: '3', title: 'മനുഷ്യന്റെ കൈകൾ', minPage: '53', maxPage: '62' },
+					{ chapterNumber: '4', title: 'അപ്പൂപ്പൻതാടി', minPage: '71', maxPage: '97' },
+					{ chapterNumber: '5', title: 'നമ്മളൊന്ന്', minPage: '99', maxPage: '114' },
+					{ chapterNumber: '6', title: 'മാനത്തോളം', minPage: '116', maxPage: '134' }
+				]
+			},
+			{
+				name: 'English',
+				chapters: [
+					{ chapterNumber: '1', title: 'Tender Touch', minPage: '7', maxPage: '36' },
+					{ chapterNumber: '2', title: 'Festive Fun', minPage: '37', maxPage: '60' },
+					{ chapterNumber: '3', title: 'IN HARMONY', minPage: '61', maxPage: '86' },
+					{ chapterNumber: '4', title: 'BLOOMS AND BREEZE', minPage: '94', maxPage: '124' },
+					{ chapterNumber: '5', title: 'Honesty Pays', minPage: '125', maxPage: '150' }
+				]
+			},
+			{
+				name: 'EVS',
+				chapters: [
+					{ chapterNumber: '1', title: 'ഹരിതഭൂമി', minPage: '7', maxPage: '21' },
+					{ chapterNumber: '2', title: 'ജന്തുലോകത്തേക്ക്', minPage: '22', maxPage: '37' },
+					{ chapterNumber: '3', title: 'ജലവും മണ്ണും', minPage: '38', maxPage: '54' },
+					{ chapterNumber: '4', title: "വൃത്തി നൽകും ശക്തി", minPage: '55', maxPage: '70' },
+					{ chapterNumber: '5', title: "ആഹാരവും ആരോഗ്യവും", minPage: '77', maxPage: '94' },
+					{ chapterNumber: '6', title: "സുരക്ഷിതജീവിതം", minPage: '95', maxPage: '113' },
+					{ chapterNumber: '7', title: "നാം ജീവിക്കുന്ന ലോകം", minPage: '114', maxPage: '133' },
+					{ chapterNumber: '8', title: "വീടും കൂടും", minPage: '135', maxPage: '148' }
+				]
+			}
+		]
+	},
+    {
 		classNumber: '4',
 		subjects: [
 			{
