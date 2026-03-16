@@ -88,7 +88,7 @@ export const classData: ClassDataType = [
 					{ chapterNumber: '5', title: "അളന്നുകുറിക്കാം", minPage: '61', maxPage: '74' },
 					{ chapterNumber: '6', title: "കൂട്ടി... കുട്ടിക്കൂട്ടിടം", minPage: '75', maxPage: '86' },
 					{ chapterNumber: '7', title: "കുറയ്ക്കണോ കൂട്ടണോ", minPage: '95', maxPage: '112' },
-					{ chapterNumber: '8', title: "ടിക്... ടിക്... ടിക്...കാം", minPage: '113', maxPage: '126' },
+					{ chapterNumber: '8', title: "ടിക്... ടിക്... ടിക്...", minPage: '113', maxPage: '126' },
 					{ chapterNumber: '9', title: "വീണ്ടും വീണ്ടും കൂട്ടുമ്പോൾ", minPage: '127', maxPage: '144' },
 					{ chapterNumber: '10', title: "പങ്കുവയ്ക്കാം", minPage: '145', maxPage: '158' },
 					{ chapterNumber: '11', title: "കുപ്പിയിലെത്ര ? സഞ്ചിയിലെത്ര ?", minPage: '160', maxPage: '172' },
