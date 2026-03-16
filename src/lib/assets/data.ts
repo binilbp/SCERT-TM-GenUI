@@ -73,9 +73,26 @@ export const classData: ClassDataType = [
 				chapters: [
 					{ chapterNumber: '1', title: 'Tender Touch', minPage: '7', maxPage: '36' },
 					{ chapterNumber: '2', title: 'Festive Fun', minPage: '37', maxPage: '60' },
-					{ chapterNumber: '3', title: 'IN HARMONY', minPage: '61', maxPage: '86' },
-					{ chapterNumber: '4', title: 'BLOOMS AND BREEZE', minPage: '94', maxPage: '124' },
+					{ chapterNumber: '3', title: 'In Harmony', minPage: '61', maxPage: '86' },
+					{ chapterNumber: '4', title: 'Blooms And Breeze', minPage: '94', maxPage: '124' },
 					{ chapterNumber: '5', title: 'Honesty Pays', minPage: '125', maxPage: '150' }
+				]
+			},
+			{
+				name: 'Maths',
+				chapters: [
+					{ chapterNumber: '1', title: "രൂപങ്ങൾ വരയ്ക്കാം", minPage: '7', maxPage: '16' },
+					{ chapterNumber: '2', title: "സംഖ്യകൾ കൂട്ടുകാർം", minPage: '17', maxPage: '32' },
+					{ chapterNumber: '3', title: "രൂപങ്ങൾ വരയ്ക്കാം", minPage: '34', maxPage: '44' },
+					{ chapterNumber: '4', title: "കൂട്ടുകൂടാംം", minPage: '45', maxPage: '60' },
+					{ chapterNumber: '5', title: "അളന്നുകുറിക്കാം", minPage: '61', maxPage: '74' },
+					{ chapterNumber: '6', title: "കൂട്ടി... കുട്ടിക്കൂട്ടിടം", minPage: '75', maxPage: '86' },
+					{ chapterNumber: '7', title: "കുറയ്ക്കണോ കൂട്ടണോ", minPage: '95', maxPage: '112' },
+					{ chapterNumber: '8', title: "ടിക്... ടിക്... ടിക്...കാം", minPage: '113', maxPage: '126' },
+					{ chapterNumber: '9', title: "വീണ്ടും വീണ്ടും കൂട്ടുമ്പോൾ", minPage: '127', maxPage: '144' },
+					{ chapterNumber: '10', title: "പങ്കുവയ്ക്കാം", minPage: '145', maxPage: '158' },
+					{ chapterNumber: '11', title: "കുപ്പിയിലെത്ര ? സഞ്ചിയിലെത്ര ?", minPage: '160', maxPage: '172' },
+					{ chapterNumber: '12', title: "ഒറ്റനോട്ടത്തിൽ", minPage: '173', maxPage: '182' }
 				]
 			},
 			{
