@@ -24,6 +24,7 @@ export const classData: ClassDataType = [
 			{
 				name: 'Malayalam',
 				chapters: [
+					{ chapterNumber: '2', title: 'നന്നായ് ഉണ്ണാൻ', minPage: '18', maxPage: '29' },
 					{ chapterNumber: '6', title: 'പറക്കും വീട് ', minPage: '62', maxPage: '78' },
 					{ chapterNumber: '7', title: 'മണിയൻ്റെ യാത്ര', minPage: '88', maxPage: '99' },
 					{ chapterNumber: '8', title: 'പച്ചിലത്തുമ്പിലൂടെ', minPage: '100', maxPage: '109' },
@@ -35,6 +36,7 @@ export const classData: ClassDataType = [
 			{
 				name: 'English',
 				chapters: [
+					{ chapterNumber: '2', title: 'A Piece of Cake', minPage: '29', maxPage: '62' },
 					{ chapterNumber: '3', title: 'The Village Of Birds', minPage: '63', maxPage: '102' },
 					{ chapterNumber: '4', title: 'Star In The Jar', minPage: '111', maxPage: '142' },
 					{ chapterNumber: '5', title: 'Robo and Friends', minPage: '143', maxPage: '166' }
