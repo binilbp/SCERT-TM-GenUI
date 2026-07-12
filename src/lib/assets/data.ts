@@ -19,6 +19,18 @@ type ClassDataType = ClassItem[];
 
 export const classData: ClassDataType = [
 	{
+		classNumber: '1',
+		subjects: [
+			{
+				name: 'English',
+				chapters: [
+					{ chapterNumber: '2', title: 'Back To Green', minPage: '37', maxPage: '60' },
+					{ chapterNumber: '3', title: 'Meow', minPage: '61', maxPage: '94' },
+				]
+			},
+		]
+	},
+	{
 		classNumber: '2',
 		subjects: [
 			{
