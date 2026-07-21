@@ -35,8 +35,12 @@ export const classData: ClassDataType = [
 		subjects: [
 			{
 				name: 'Malayalam',
-				chapters: [
+				chapters: [					
+					{ chapterNumber: '1', title: 'മഴയോ മഴ', minPage: '8', maxPage: '17' },
 					{ chapterNumber: '2', title: 'നന്നായ് ഉണ്ണാൻ', minPage: '18', maxPage: '29' },
+					{ chapterNumber: '3', title: 'എന്താണമ്മേ സ്വാതന്ത്ര്യം', minPage: '30', maxPage: '37' },
+					{ chapterNumber: '4', title: 'പൂരം പൊടിപൂരം', minPage: '38', maxPage: '47' },
+					{ chapterNumber: '5', title: 'രുചിമേളം', minPage: '48', maxPage: '61' },
 					{ chapterNumber: '6', title: 'പറക്കും വീട് ', minPage: '62', maxPage: '78' },
 					{ chapterNumber: '7', title: 'മണിയൻ്റെ യാത്ര', minPage: '88', maxPage: '99' },
 					{ chapterNumber: '8', title: 'പച്ചിലത്തുമ്പിലൂടെ', minPage: '100', maxPage: '109' },
@@ -48,6 +52,7 @@ export const classData: ClassDataType = [
 			{
 				name: 'English',
 				chapters: [
+					{ chapterNumber: '1', title: 'AN UMBRELLA FOR ALL', minPage: '7', maxPage: '28' },
 					{ chapterNumber: '2', title: 'A Piece of Cake', minPage: '29', maxPage: '62' },
 					{ chapterNumber: '3', title: 'The Village Of Birds', minPage: '63', maxPage: '102' },
 					{ chapterNumber: '4', title: 'Star In The Jar', minPage: '111', maxPage: '142' },
@@ -57,6 +62,9 @@ export const classData: ClassDataType = [
 			{
 				name: 'Maths',
 				chapters: [
+					{ chapterNumber: '2', title: 'ഒളിച്ചേ... കണ്ടേ...', minPage: '22', maxPage: '35' },
+					{ chapterNumber: '3', title: 'നല്ല നാടിനായ്... നല്ല നാളേക്കായ്...', minPage: '36', maxPage: '55' },
+					{ chapterNumber: '4', title: 'സമ്മാനപ്പൊതി', minPage: '56', maxPage: '67' },
 					{ chapterNumber: '5', title: 'ഒന്നായ് ചേരാം നന്നായ് വളരാം', minPage: '68', maxPage: '86' },
 					{ chapterNumber: '6', title: 'കാട്ടിലെ ഉത്സവം', minPage: '96', maxPage: '104' },
 					{ chapterNumber: '7', title: 'ചങ്ങാതിക്കൂട്ടം', minPage: '112', maxPage: '129' },
@@ -138,6 +146,7 @@ export const classData: ClassDataType = [
 			{
 				name: 'English',
 				chapters: [
+					{ chapterNumber: '2', title: "Voices in Unison", minPage: '35', maxPage: '60' },
 					{ chapterNumber: '3', title: "Pages of Wonder", minPage: '61', maxPage: '86' },
 					{ chapterNumber: '4', title: "Delightful Bites", minPage: '95', maxPage: '124' },
 					{ chapterNumber: '5', title: "The Melody of Rain", minPage: '125', maxPage: '150' }
@@ -146,6 +155,9 @@ export const classData: ClassDataType = [
             {
 				name: 'EVS',
 				chapters: [
+					{ chapterNumber: '1', title: "ജീവികളും ചുറ്റുപാടും", minPage: '7', maxPage: '25' },
+					{ chapterNumber: '2', title: "ഇന്ത്യ എന്റെ രാജ്യം", minPage: '26', maxPage: '47' },
+					{ chapterNumber: '3', title: "ചിറകുള്ള കൂട്ടുകാർ", minPage: '48', maxPage: '67' },
 					{ chapterNumber: '6', title: "ആകാശക്കാഴ്‌ചകൾ", minPage: '106', maxPage: '121' },
 					{ chapterNumber: '7', title: "ദിക്കറിയാം നാടറിയാം", minPage: '122', maxPage: '133' },
 					{ chapterNumber: '8', title: "ഇന്നലെ, ഇന്ന്...", minPage: '134', maxPage: '158' }
@@ -154,6 +166,10 @@ export const classData: ClassDataType = [
 			{
 				name: 'Maths',
 				chapters: [
+					{ chapterNumber: '2', title: "ആയിരവും കടന്ന്", minPage: '19', maxPage: '34' },
+					{ chapterNumber: '3', title: "എത്രയെത്ര സംഖ്യകൾ", minPage: '35', maxPage: '46' },
+					{ chapterNumber: '4', title: "കൂടുന്ന കൂട്ടം", minPage: '47', maxPage: '62' },
+					{ chapterNumber: '5', title: "നേരമായി", minPage: '63', maxPage: '76' },
 					{ chapterNumber: '6', title: "കുറയുന്ന കൂട്ടം", minPage: '77', maxPage: '94' },
 					{ chapterNumber: '7', title: "പെരുക്കൽപ്പെരുമ", minPage: '103', maxPage: '120' },
 					{ chapterNumber: '8', title: "ഇങ്ങനെ അളക്കാം", minPage: '121', maxPage: '138' },
